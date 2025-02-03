@@ -62,7 +62,12 @@ h1{
   width: 240px;
   height: 240px;
   border-radius: 10px;
-  object-fit: cover;  
+  object-fit: cover;
+  transition: outline .1s ease-in;  
+}
+
+.product-banner img:hover{
+  outline: 2px solid var(--cc-Red);
 }
 
 .add-to-cart{

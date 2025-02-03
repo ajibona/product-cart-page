@@ -1,0 +1,269 @@
+
+*,
+::after,
+::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  
+  --cc-Red: hsl(14, 86%, 42%);
+  --cc-Green: hsl(159, 69%, 38%);
+
+  --cc-Rose-50: hsl(20, 50%, 98%);
+  --cc-Rose-100: hsl(13, 31%, 94%);
+  --cc-Rose-300: hsl(14, 25%, 72%);
+  --cc-Rose-400: hsl(7, 20%, 60%);
+  --cc-Rose-500: hsl(12, 20%, 44%);
+  --cc-Rose-900: hsl(14, 65%, 9%);
+}
+
+body{
+  font-family: "Red Hat Text", serif;
+  font-size: 1rem;
+  background-color: var(--cc-Rose-50);
+  scroll-behavior: smooth;
+}
+
+button,input{
+  font-family: "Red Hat Text", serif;
+}
+
+h1{
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#product-page{
+  max-width: 1200px;
+  margin-block: 50px;
+  margin-inline: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.product-all-list{
+  display: flex;
+  column-gap: 20px;
+  row-gap: 40px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.product-banner{
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.product-banner img{
+  width: 240px;
+  height: 240px;
+  border-radius: 10px;
+  object-fit: cover;  
+}
+
+.add-to-cart{
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  padding-block: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  background-color: #fff;
+  outline: 1px solid var(--cc-Rose-300);
+  border-radius: 28px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.product-name{
+  color: var(--cc-Rose-500);
+  font-size: .9rem;
+  margin-bottom: 5px;
+}
+
+.product-full-name{
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.product-price{
+  font-weight: 600;
+  color: var(--cc-Red);
+}
+
+.cart-page{
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cart-quantity{
+  font-size: 1.4rem;
+  color: var(--cc-Red);
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.cart-empty{
+  margin-inline: auto;
+  width: 100%;
+}
+
+.added-cart{
+  font-size: .9rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--cc-Rose-300);
+}
+
+.empty-cart-container{
+  display: none;
+}
+
+.cart-list-style{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-cart-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--cc-Rose-100);
+}
+
+.cart-name{
+  font-size: .9 rem;
+  font-weight: 600;
+}
+
+.cart-details{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.item-multiply{
+  color: var(--cc-Red);
+  font-weight: 600;
+  font-size: .9rem;
+  margin-right: 10px;
+}
+
+.item-cart-price{
+  font-size: .9rem;
+  color: var(--cc-Rose-400);
+  margin-right: 5px;
+  font-weight: 500;
+}
+
+.total-item-price{
+  font-size: .9rem;
+  color: var(--cc-Rose-500);
+  font-weight: 500;
+}
+
+.close-icon{
+  font-size: 1.5rem;
+  color: var(--cc-Rose-300);
+  transition: color .1s ease-in;
+  cursor: pointer;
+}
+
+.close-icon:hover{
+  color: var(--cc-Rose-900);
+}
+
+.total-display{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-text{
+  color: var(--cc-Rose-900);
+  font-size: 1rem;
+}
+
+.total-cart-amount{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.warning-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+  background-color: var(--cc-Rose-100);
+  width: 100%;
+  padding-block: 15px;
+  border-radius: 8px;
+}
+
+.warning-div p{
+  color: var(--cc-Rose-900);
+}
+
+.warning-div p span{
+  font-weight: 600;
+}
+
+.order-btn{
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--cc-Red);
+  padding-block: 15px;
+  font-size: 1.1rem;
+  color: #fff;
+  border-radius: 28px;
+  cursor: pointer;
+  transition: background-color .1s ease-in;
+}
+
+.order-btn:hover{
+  background-color: var(--cc-Rose-900);
+}
+
+@media (width <= 699px){
+  #product-page{
+    flex-direction: column;
+    margin-inline: 20px;
+  }
+
+  .product-banner{
+    width: 100%;
+  }
+
+  .product-banner img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .cart-page{
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+@media (width < 1100px){
+  #product-page{
+    margin-inline: 20px;
+  }
+}
